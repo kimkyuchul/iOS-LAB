@@ -1,2 +1,2 @@
-# -Autolayout-LAB
+# Autolayout-LAB
 Autolayout programmatically 
