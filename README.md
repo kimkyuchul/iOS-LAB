@@ -8,3 +8,4 @@ Autolayout programmatically
  
 ## snapkit 이슈
 - ld: framework not found Pods (https://stackoverflow.com/questions/29865899/ld-framework-not-found-pods?page=1&tab=votes#tab-top)
+-  기존 실행하던 .xcodeproj 대신 새로 생성된 .xcworkspace 를 실행
