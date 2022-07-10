@@ -13,6 +13,7 @@
 		69956DD928784256009DA71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69956DD728784256009DA71A /* Main.storyboard */; };
 		69956DDB2878425A009DA71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69956DDA2878425A009DA71A /* Assets.xcassets */; };
 		69956DDE2878425A009DA71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69956DDC2878425A009DA71A /* LaunchScreen.storyboard */; };
+		69C31E80287AB1E40047F486 /* MyCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C31E7F287AB1E40047F486 /* MyCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		69956DDA2878425A009DA71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69956DDD2878425A009DA71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69956DDF2878425A009DA71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69C31E7F287AB1E40047F486 /* MyCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				69956DD128784256009DA71A /* AppDelegate.swift */,
 				69956DD328784256009DA71A /* SceneDelegate.swift */,
+				69C31E7F287AB1E40047F486 /* MyCircleView.swift */,
 				69956DD528784256009DA71A /* ViewController.swift */,
 				69956DD728784256009DA71A /* Main.storyboard */,
 				69956DDA2878425A009DA71A /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C31E80287AB1E40047F486 /* MyCircleView.swift in Sources */,
 				69956DD628784256009DA71A /* ViewController.swift in Sources */,
 				69956DD228784256009DA71A /* AppDelegate.swift in Sources */,
 				69956DD428784256009DA71A /* SceneDelegate.swift in Sources */,
