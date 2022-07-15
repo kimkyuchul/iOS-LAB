@@ -103,6 +103,12 @@ class ViewController: UIViewController {
                make.top.equalTo(redBox.snp.bottom).offset(20)
                make.centerX.equalToSuperview()
        }
+           
+           greenBox.snp.makeConstraints{ (make) in
+               make.width.height.equalTo(100)
+               make.top.equalTo(redBox.snp.bottom).offset(20)
+               make.centerX.equalToSuperview()
+       }
 
 
    }
