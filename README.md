@@ -1,5 +1,5 @@
-# Autolayout-LAB
-Autolayout programmatically 
+# iOS-LAB
+iOS  
 
 ## Autolayout의 핵심
 - 해당 뷰의 X,y 위치 
