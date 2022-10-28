@@ -39,7 +39,6 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
         return checkImageView
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

@@ -35,11 +35,11 @@ class AnotherFlowLayoutPracticeVC: UIViewController {
     }
     
     func setUpcollectionView() {
-           collectionView.delegate = self
-           collectionView.dataSource = self
-           
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         collectionView.register(AnotherFlowLayoutPracticeCell.classForCoder(), forCellWithReuseIdentifier: AnotherFlowLayoutPracticeCell.id)
-           }
+    }
 }
 
 extension AnotherFlowLayoutPracticeVC: UICollectionViewDataSource {
@@ -50,12 +50,9 @@ extension AnotherFlowLayoutPracticeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnotherFlowLayoutPracticeCell.id, for: indexPath) as? AnotherFlowLayoutPracticeCell else { fatalError() }
-        
 //        cell.configuration()
-        
         return cell
     }
-    
 }
 
 extension AnotherFlowLayoutPracticeVC: UICollectionViewDelegateFlowLayout {
