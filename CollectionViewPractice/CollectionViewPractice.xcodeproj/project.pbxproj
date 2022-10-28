@@ -13,6 +13,8 @@
 		69525642290AE600001F69AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69525640290AE600001F69AA /* LaunchScreen.storyboard */; };
 		6952564A290AE7A5001F69AA /* FlowLayoutPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69525649290AE7A5001F69AA /* FlowLayoutPracticeVC.swift */; };
 		6952564C290B6CA8001F69AA /* FlowLayoutPracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6952564B290B6CA8001F69AA /* FlowLayoutPracticeCell.swift */; };
+		6952564E290C29D7001F69AA /* AnotherFlowLayoutPracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6952564D290C29D7001F69AA /* AnotherFlowLayoutPracticeCell.swift */; };
+		69525650290C2A04001F69AA /* AnotherFlowLayoutPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6952564F290C2A04001F69AA /* AnotherFlowLayoutPracticeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		69525643290AE600001F69AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69525649290AE7A5001F69AA /* FlowLayoutPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutPracticeVC.swift; sourceTree = "<group>"; };
 		6952564B290B6CA8001F69AA /* FlowLayoutPracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutPracticeCell.swift; sourceTree = "<group>"; };
+		6952564D290C29D7001F69AA /* AnotherFlowLayoutPracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherFlowLayoutPracticeCell.swift; sourceTree = "<group>"; };
+		6952564F290C2A04001F69AA /* AnotherFlowLayoutPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherFlowLayoutPracticeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				69525635290AE5FD001F69AA /* AppDelegate.swift */,
 				69525637290AE5FD001F69AA /* SceneDelegate.swift */,
 				6952564B290B6CA8001F69AA /* FlowLayoutPracticeCell.swift */,
+				6952564D290C29D7001F69AA /* AnotherFlowLayoutPracticeCell.swift */,
 				69525649290AE7A5001F69AA /* FlowLayoutPracticeVC.swift */,
+				6952564F290C2A04001F69AA /* AnotherFlowLayoutPracticeVC.swift */,
 				6952563E290AE600001F69AA /* Assets.xcassets */,
 				69525640290AE600001F69AA /* LaunchScreen.storyboard */,
 				69525643290AE600001F69AA /* Info.plist */,
@@ -139,6 +145,8 @@
 			files = (
 				6952564C290B6CA8001F69AA /* FlowLayoutPracticeCell.swift in Sources */,
 				69525636290AE5FD001F69AA /* AppDelegate.swift in Sources */,
+				6952564E290C29D7001F69AA /* AnotherFlowLayoutPracticeCell.swift in Sources */,
+				69525650290C2A04001F69AA /* AnotherFlowLayoutPracticeVC.swift in Sources */,
 				69525638290AE5FD001F69AA /* SceneDelegate.swift in Sources */,
 				6952564A290AE7A5001F69AA /* FlowLayoutPracticeVC.swift in Sources */,
 			);

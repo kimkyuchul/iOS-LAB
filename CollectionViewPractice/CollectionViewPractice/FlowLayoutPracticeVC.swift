@@ -13,8 +13,19 @@ class FlowLayoutPracticeVC: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("RELOAD", for: .normal)
         button.backgroundColor = .systemCyan
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false //translatesAutoresizingMaskIntoConstraints라는 옵션을 false로 설정해 AutoresizingMask를 사용한 Constraints 변환을 막는 것
         button.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
+        return button
+    }()
+    
+    private let nextButton:UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("next", for: .normal)
+        button.backgroundColor = .systemCyan
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(nextbuttonTap), for: .touchUpInside)
+        button.layer.cornerRadius = 10
         return button
     }()
     
@@ -32,10 +43,11 @@ class FlowLayoutPracticeVC: UIViewController {
         
         view.addSubview(collectionView)
         view.addSubview(reLoadButton)
+        view.addSubview(nextButton)
         
         NSLayoutConstraint.activate(
             [
-                collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
                 collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
                 collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
                 collectionView.bottomAnchor.constraint(equalTo: reLoadButton.topAnchor, constant: -15),
@@ -43,6 +55,10 @@ class FlowLayoutPracticeVC: UIViewController {
                 reLoadButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 5),
                 reLoadButton.widthAnchor.constraint(equalToConstant: 100),
                 reLoadButton.heightAnchor.constraint(equalToConstant: 45),
+                nextButton.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -10),
+                nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+                nextButton.widthAnchor.constraint(equalToConstant: 50),
+                nextButton.heightAnchor.constraint(equalToConstant: 25)
             ]
         )
         setUpcollectionView()
@@ -60,6 +76,11 @@ class FlowLayoutPracticeVC: UIViewController {
         print("CollectionView Reload")
         collectionView.collectionViewLayout.invalidateLayout()
         //collectionView.reloadData()
+    }
+    
+    @objc func nextbuttonTap() {
+        let nextView = AnotherFlowLayoutPracticeVC()
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
 }
 
