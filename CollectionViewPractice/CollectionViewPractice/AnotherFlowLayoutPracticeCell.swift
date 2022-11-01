@@ -10,8 +10,9 @@ import UIKit
 class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
     
     static let id = "AnotherFlowLayoutPracticeCell"
+    
     static let imageConfig = UIImage.SymbolConfiguration(pointSize: CGFloat(28))
-    static let faceImageConfig = UIImage.SymbolConfiguration(pointSize: CGFloat(120))
+    
     
     var faceimage: UIImage?
     var checkImage: UIImage?
@@ -22,8 +23,8 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
-        imageView.layer.borderColor = UIColor.systemRed.cgColor
-        imageView.layer.borderWidth = 1.5
+//        imageView.layer.borderColor = UIColor.black.cgColor
+//        imageView.layer.borderWidth = 1.5
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "face.jpg")
         return imageView
@@ -35,17 +36,23 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
         checkImageView.clipsToBounds = true
         checkImageView.layer.cornerRadius = CGFloat(28) / 2.0
         checkImageView.layer.borderWidth = 2
-        checkImageView.image = UIImage(systemName: "checkmark.circle.fill", withConfiguration: imageConfig)
+        checkImageView.image = UIImage(systemName: "circle.fill", withConfiguration: imageConfig)
         return checkImageView
     }()
+    
+    override var isSelected: Bool {
+        didSet {
+            setSelected(isSelected)
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setViewHierarchy()
         setConstraints()
-//      setupImages()
-//      setupcheckImageView()
+//        setupImages()
+//        setupcheckImageView()
     }
     
     required init?(coder: NSCoder) {
@@ -55,6 +62,7 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
     private func setViewHierarchy() {
         contentView.addSubview(faceImageView)
         contentView.addSubview(checkImageView)
+        contentView.layer.borderWidth = 1.5
     }
     
     private func setConstraints() {
@@ -62,12 +70,35 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
             [
                 faceImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
                 faceImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor),
-                checkImageView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 10),
-                checkImageView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor, constant: 5),
+                checkImageView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor,constant: 10),
+                checkImageView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor,constant: 5),
                 checkImageView.widthAnchor.constraint(equalToConstant: CGFloat(28)),
                 checkImageView.heightAnchor.constraint(equalTo: checkImageView.widthAnchor)
             ]
         )
+    }
+    
+    private func setSelected(_ selected: Bool) {
+        if selected {
+            selectedStyle()
+        } else {
+            notselectedStyle()
+        }
+    }
+    
+    private func selectedStyle() {
+         checkImageView.image = UIImage(systemName: "checkmark.circle.fill", withConfiguration: AnotherFlowLayoutPracticeCell.imageConfig)
+        checkImageView.layer.borderColor = UIColor.systemRed.cgColor
+        checkImageView.backgroundColor = .white
+        
+        contentView.layer.borderColor = UIColor.systemRed.cgColor
+    }
+    
+    private func notselectedStyle() {
+        checkImageView.image = UIImage(systemName: "circle.fill", withConfiguration: AnotherFlowLayoutPracticeCell.imageConfig)
+        checkImageView.layer.borderColor = UIColor.darkGray.cgColor
+        
+        contentView.layer.borderColor = UIColor.black.cgColor
     }
     
 //    private func setupImages() {
@@ -77,7 +108,7 @@ class AnotherFlowLayoutPracticeCell: UICollectionViewCell {
 //          checkImage = UIImage(systemName: "checkmark.circle.fill", withConfiguration: imageConfig)
 //          faceimage = UIImage(systemName: "face.jpg", withConfiguration: faceImageConfig)
 //      }
-    
+//
 //    func setupcheckImageView() {
 //        checkImageView = UIImageView()
 //        checkImageView.image = noneCheckImage

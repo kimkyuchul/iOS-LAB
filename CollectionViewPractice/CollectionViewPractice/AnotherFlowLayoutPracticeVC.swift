@@ -71,7 +71,7 @@ extension AnotherFlowLayoutPracticeVC: UICollectionViewDelegateFlowLayout {
 //        return CGSize(width: cellWidth, height: cellHeight)
         
         let interval: CGFloat = 10
-        let count = floor(UIScreen.main.bounds.width / 100)
+        let count = floor(UIScreen.main.bounds.width / 120)
         let size = floor((UIScreen.main.bounds.width - interval * 4) / count)
         return CGSize(width: size, height: size)
     }
