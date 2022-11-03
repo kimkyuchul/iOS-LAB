@@ -14,6 +14,8 @@ class AnotherFlowLayoutPracticeVC: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .systemOrange
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        //다중 선택 https://stackoverflow.com/questions/52757524/how-do-i-got-multiple-selections-in-uicollection-view-using-swift-4
+        collectionView.allowsMultipleSelection = true
         return collectionView
     }()
 
@@ -51,7 +53,20 @@ extension AnotherFlowLayoutPracticeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnotherFlowLayoutPracticeCell.id, for: indexPath) as? AnotherFlowLayoutPracticeCell else { fatalError() }
 //        cell.configuration()
+        
+        if indexPath.item == 0 {
+            cell.isSelected = true
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+        } else {
+            cell.isSelected = false
+        }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! AnotherFlowLayoutPracticeCell
+        print(collectionView.indexPathsForSelectedItems)
     }
 }
 
