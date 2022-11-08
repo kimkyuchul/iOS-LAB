@@ -17,6 +17,8 @@
 		699624142919895A00FCA95D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699624132919895A00FCA95D /* User.swift */; };
 		6996241629198A0500FCA95D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996241529198A0500FCA95D /* LoginViewModel.swift */; };
 		6996241929198BFE00FCA95D /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996241829198BFE00FCA95D /* ObservableObject.swift */; };
+		6996241B291A1FC600FCA95D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996241A291A1FC600FCA95D /* NetworkService.swift */; };
+		6996241E291A46DF00FCA95D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6996241D291A46DF00FCA95D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		699624132919895A00FCA95D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6996241529198A0500FCA95D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6996241829198BFE00FCA95D /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		6996241A291A1FC600FCA95D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6996241D291A46DF00FCA95D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,13 @@
 				1296C1E02764177600CC9685 /* SceneDelegate.swift */,
 				1296C1E42764177600CC9685 /* Main.storyboard */,
 				6996241729198B3400FCA95D /* Login */,
-				1296C1F42764196700CC9685 /* HomeViewController.swift */,
+				6996241C291A46BF00FCA95D /* HomeView */,
 				1296C1E72764177800CC9685 /* Assets.xcassets */,
 				1296C1E92764177800CC9685 /* LaunchScreen.storyboard */,
 				1296C1EC2764177800CC9685 /* Info.plist */,
 				699624132919895A00FCA95D /* User.swift */,
 				6996241829198BFE00FCA95D /* ObservableObject.swift */,
+				6996241A291A1FC600FCA95D /* NetworkService.swift */,
 			);
 			path = DesignPattern;
 			sourceTree = "<group>";
@@ -85,6 +90,15 @@
 				6996241529198A0500FCA95D /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6996241C291A46BF00FCA95D /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				1296C1F42764196700CC9685 /* HomeViewController.swift */,
+				6996241D291A46DF00FCA95D /* HomeViewModel.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1296C1F32764188C00CC9685 /* LoginViewController.swift in Sources */,
+				6996241E291A46DF00FCA95D /* HomeViewModel.swift in Sources */,
 				1296C1DF2764177600CC9685 /* AppDelegate.swift in Sources */,
+				6996241B291A1FC600FCA95D /* NetworkService.swift in Sources */,
 				6996241629198A0500FCA95D /* LoginViewModel.swift in Sources */,
 				1296C1E12764177600CC9685 /* SceneDelegate.swift in Sources */,
 				6996241929198BFE00FCA95D /* ObservableObject.swift in Sources */,
