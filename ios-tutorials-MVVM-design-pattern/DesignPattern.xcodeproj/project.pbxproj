@@ -72,7 +72,7 @@
 				1296C1E02764177600CC9685 /* SceneDelegate.swift */,
 				1296C1E42764177600CC9685 /* Main.storyboard */,
 				6996241729198B3400FCA95D /* Login */,
-				6996241C291A46BF00FCA95D /* HomeView */,
+				6996241C291A46BF00FCA95D /* Home */,
 				1296C1E72764177800CC9685 /* Assets.xcassets */,
 				1296C1E92764177800CC9685 /* LaunchScreen.storyboard */,
 				1296C1EC2764177800CC9685 /* Info.plist */,
@@ -92,13 +92,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		6996241C291A46BF00FCA95D /* HomeView */ = {
+		6996241C291A46BF00FCA95D /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				1296C1F42764196700CC9685 /* HomeViewController.swift */,
 				6996241D291A46DF00FCA95D /* HomeViewModel.swift */,
 			);
-			path = HomeView;
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
