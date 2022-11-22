@@ -12,8 +12,11 @@
 		5A654FAF292BC51D00F04F57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FAE292BC51D00F04F57 /* ViewController.swift */; };
 		5A654FB4292BC51F00F04F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A654FB3292BC51F00F04F57 /* Assets.xcassets */; };
 		5A654FB7292BC51F00F04F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A654FB5292BC51F00F04F57 /* LaunchScreen.storyboard */; };
-		5A654FC0292BC7BC00F04F57 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FBF292BC7BC00F04F57 /* SnapKit */; };
-		5A654FC2292BC7BC00F04F57 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FC1292BC7BC00F04F57 /* SnapKit-Dynamic */; };
+		5A654FCC292BD77100F04F57 /* CoinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FCB292BD77100F04F57 /* CoinCollectionViewCell.swift */; };
+		5A654FCF292BE44700F04F57 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FCE292BE44700F04F57 /* CoinView.swift */; };
+		5A654FD6292C974B00F04F57 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD5292C974B00F04F57 /* SnapKit */; };
+		5A654FD8292C974E00F04F57 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD7292C974E00F04F57 /* Moya */; };
+		5A654FDA292C975600F04F57 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD9292C975600F04F57 /* ReactiveMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		5A654FB3292BC51F00F04F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A654FB6292BC51F00F04F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A654FB8292BC52000F04F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A654FCB292BD77100F04F57 /* CoinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A654FCE292BE44700F04F57 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,8 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A654FC0292BC7BC00F04F57 /* SnapKit in Frameworks */,
-				5A654FC2292BC7BC00F04F57 /* SnapKit-Dynamic in Frameworks */,
+				5A654FD8292C974E00F04F57 /* Moya in Frameworks */,
+				5A654FD6292C974B00F04F57 /* SnapKit in Frameworks */,
+				5A654FDA292C975600F04F57 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				5A654FA9292BC51D00F04F57 /* MoyaPractice */,
 				5A654FA8292BC51D00F04F57 /* Products */,
+				5A654FC3292BCEED00F04F57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,8 @@
 		5A654FA9292BC51D00F04F57 /* MoyaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				5A654FCD292BDA5B00F04F57 /* View */,
+				5A654FC6292BD2A000F04F57 /* Cell */,
 				5A654FAA292BC51D00F04F57 /* AppDelegate.swift */,
 				5A654FAC292BC51D00F04F57 /* SceneDelegate.swift */,
 				5A654FAE292BC51D00F04F57 /* ViewController.swift */,
@@ -66,6 +75,29 @@
 				5A654FB8292BC52000F04F57 /* Info.plist */,
 			);
 			path = MoyaPractice;
+			sourceTree = "<group>";
+		};
+		5A654FC3292BCEED00F04F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A654FC6292BD2A000F04F57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5A654FCB292BD77100F04F57 /* CoinCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5A654FCD292BDA5B00F04F57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A654FCE292BE44700F04F57 /* CoinView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,8 +117,9 @@
 			);
 			name = MoyaPractice;
 			packageProductDependencies = (
-				5A654FBF292BC7BC00F04F57 /* SnapKit */,
-				5A654FC1292BC7BC00F04F57 /* SnapKit-Dynamic */,
+				5A654FD5292C974B00F04F57 /* SnapKit */,
+				5A654FD7292C974E00F04F57 /* Moya */,
+				5A654FD9292C975600F04F57 /* ReactiveMoya */,
 			);
 			productName = MoyaPractice;
 			productReference = 5A654FA7292BC51D00F04F57 /* MoyaPractice.app */;
@@ -118,6 +151,7 @@
 			mainGroup = 5A654F9E292BC51D00F04F57;
 			packageReferences = (
 				5A654FBE292BC7BC00F04F57 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5A654FD0292C945900F04F57 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 5A654FA8292BC51D00F04F57 /* Products */;
 			projectDirPath = "";
@@ -145,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A654FCF292BE44700F04F57 /* CoinView.swift in Sources */,
 				5A654FAF292BC51D00F04F57 /* ViewController.swift in Sources */,
 				5A654FAB292BC51D00F04F57 /* AppDelegate.swift in Sources */,
 				5A654FAD292BC51D00F04F57 /* SceneDelegate.swift in Sources */,
+				5A654FCC292BD77100F04F57 /* CoinCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,18 +411,31 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5A654FD0292C945900F04F57 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5A654FBF292BC7BC00F04F57 /* SnapKit */ = {
+		5A654FD5292C974B00F04F57 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5A654FBE292BC7BC00F04F57 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		5A654FC1292BC7BC00F04F57 /* SnapKit-Dynamic */ = {
+		5A654FD7292C974E00F04F57 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A654FBE292BC7BC00F04F57 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
+			package = 5A654FD0292C945900F04F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		5A654FD9292C975600F04F57 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A654FD0292C945900F04F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
