@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Moya
 
 class ViewController: UIViewController {
     
@@ -14,12 +15,62 @@ class ViewController: UIViewController {
     
     let coinView = CoinView()
     
+    private(set) var data: coinResponse?
+    
+//    var orderCurrency = "BTC"
+//    var paymentCurrency = "KRW"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemPink
         setCollectionView()
         setViewHierarchies()
         setConstraints()
+        getCoinData()
+        
+//        let provider = MoyaProvider<BithumbAPIService>()
+//
+//        provider.request(.getData(orderCurrency, paymentCurrency)) { result in
+//            switch result {
+//            case.success(let response):
+//                do {
+//                    print(response)
+//                } catch(let error) {
+//                    print(error.localizedDescription)
+//                }
+////                    self.data = try response.map(coinResponse.self)
+////                    guard let data = response.data  else {return}  // Data, your JSON response is probably
+////                    print(data)
+//
+//            case.failure(let error):
+//                print(MoyaError.self)
+//            }
+//        }
+    }
+    
+    func getCoinData() {
+        BithumbServiceAPI.shared.getBithumbs { response in
+            switch response {
+            case .success(let CoinData):
+                if let data = CoinData as? coinResponse {
+                    print(data)
+                }
+                
+            case .requestErr(let message):
+                print("requestErr", message)
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+                    
+            }
+        }
+    }
+    
+    func updateUI(data:String) {
+        
     }
     
     func setCollectionView() {
@@ -47,6 +98,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CoinCollectionViewCell.id, for: indexPath) as? CoinCollectionViewCell else {fatalError()}
         
         cell.titleLabel.text = response[indexPath.row]
+        //cell.callBackLabel.text = orderCurrency
         return cell
     }
     

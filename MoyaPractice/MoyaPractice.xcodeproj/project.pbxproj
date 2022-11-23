@@ -17,6 +17,9 @@
 		5A654FD6292C974B00F04F57 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD5292C974B00F04F57 /* SnapKit */; };
 		5A654FD8292C974E00F04F57 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD7292C974E00F04F57 /* Moya */; };
 		5A654FDA292C975600F04F57 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 5A654FD9292C975600F04F57 /* ReactiveMoya */; };
+		5A654FDD292CB3C100F04F57 /* coinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FDC292CB3C100F04F57 /* coinResponse.swift */; };
+		5A654FDF292CB51400F04F57 /* BithumbAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FDE292CB51400F04F57 /* BithumbAPI.swift */; };
+		5A654FE1292DF3D600F04F57 /* BithumbServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A654FE0292DF3D600F04F57 /* BithumbServiceAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		5A654FB8292BC52000F04F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A654FCB292BD77100F04F57 /* CoinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A654FCE292BE44700F04F57 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		5A654FDC292CB3C100F04F57 /* coinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinResponse.swift; sourceTree = "<group>"; };
+		5A654FDE292CB51400F04F57 /* BithumbAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BithumbAPI.swift; sourceTree = "<group>"; };
+		5A654FE0292DF3D600F04F57 /* BithumbServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BithumbServiceAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		5A654FA9292BC51D00F04F57 /* MoyaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				5A654FDB292CB3A400F04F57 /* Network */,
 				5A654FCD292BDA5B00F04F57 /* View */,
 				5A654FC6292BD2A000F04F57 /* Cell */,
 				5A654FAA292BC51D00F04F57 /* AppDelegate.swift */,
@@ -98,6 +105,16 @@
 				5A654FCE292BE44700F04F57 /* CoinView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5A654FDB292CB3A400F04F57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5A654FDC292CB3C100F04F57 /* coinResponse.swift */,
+				5A654FDE292CB51400F04F57 /* BithumbAPI.swift */,
+				5A654FE0292DF3D600F04F57 /* BithumbServiceAPI.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A654FE1292DF3D600F04F57 /* BithumbServiceAPI.swift in Sources */,
 				5A654FCF292BE44700F04F57 /* CoinView.swift in Sources */,
 				5A654FAF292BC51D00F04F57 /* ViewController.swift in Sources */,
 				5A654FAB292BC51D00F04F57 /* AppDelegate.swift in Sources */,
+				5A654FDF292CB51400F04F57 /* BithumbAPI.swift in Sources */,
+				5A654FDD292CB3C100F04F57 /* coinResponse.swift in Sources */,
 				5A654FAD292BC51D00F04F57 /* SceneDelegate.swift in Sources */,
 				5A654FCC292BD77100F04F57 /* CoinCollectionViewCell.swift in Sources */,
 			);
