@@ -17,20 +17,20 @@ enum NetworkResult<T> {
 }
 
 enum BithumbAPIService {
-    case getData(String, String)
+    case getData(orderCurrency: String, paymentCurrency: String)
 }
 
-extension BithumbAPIService: TargetType {
+extension BithumbAPIService: BaseTargetType {
     var baseURL: URL {
-        return URL(string: "https://api.bithumb.com/public/ticker/")!
+        return URL(string: URLConst.base)!
     }
-    
+        
     // 요청 경로
     // 주문 통화와 결제 통화
     var path: String {
         switch self {
         case .getData(let orderCurrency, let paymentCurrency):
-            return "?order_currency=\(orderCurrency)&payment_currency=\(paymentCurrency)"
+            return URLConst.ticker + "?order_currency=\(orderCurrency)&payment_currency=\(paymentCurrency)"
         }
     }
     

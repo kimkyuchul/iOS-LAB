@@ -14,14 +14,12 @@ public class BithumbServiceAPI {
     
     var bithumbProvider = MoyaProvider<BithumbAPIService>()
     
-    var orderCurrency = "BTC"
-    var paymentCurrency = "KRW"
     
     public init() { }
     
-    func getBithumbs(completion: @escaping (NetworkResult<Any>) -> Void) {
+     func getBithumbs(orderCurrency: String, paymentCurrency: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        bithumbProvider.request(.getData(orderCurrency, paymentCurrency)) { result in
+        bithumbProvider.request(.getData(orderCurrency: orderCurrency, paymentCurrency: paymentCurrency)) { result in
             switch result {
             case.success(let response):
                 let statusCode = response.statusCode
@@ -56,7 +54,7 @@ public class BithumbServiceAPI {
         guard let decodedData = try? decoder.decode(coinResponse.self, from: data) else {
             return .pathErr}
         
-        return .success(decodedData)
+        return .success(decodedData.data)
         }
     }
 

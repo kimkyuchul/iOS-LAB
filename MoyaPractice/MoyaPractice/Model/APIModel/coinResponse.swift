@@ -7,14 +7,13 @@
 
 import Foundation
 
-struct coinResponse: Codable {
-    let status: String
+struct coinResponse: Codable  {
     let data: ResponseData
     
     struct ResponseData: Codable {
         
-        let opening_price: String
-        let closing_price: String
+        var opening_price: String
+        var closing_price: String
         let min_price: String
         let max_price: String
         let acc_trade_value: String
