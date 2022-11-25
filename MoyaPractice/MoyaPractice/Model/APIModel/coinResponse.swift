@@ -12,8 +12,8 @@ struct coinResponse: Codable  {
     
     struct ResponseData: Codable {
         
-        var opening_price: String
-        var closing_price: String
+        let opening_price: String
+        let closing_price: String
         let min_price: String
         let max_price: String
         let acc_trade_value: String
