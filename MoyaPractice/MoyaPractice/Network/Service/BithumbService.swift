@@ -1,5 +1,5 @@
 //
-//  BithumbServiceAPI.swift
+//  BithumbService.swift
 //  MoyaPractice
 //
 //  Created by 김규철 on 2022/11/23.
@@ -8,16 +8,14 @@
 import Foundation
 import Moya
 
-public class BithumbServiceAPI {
+final class BithumbService {
     
-    static let shared = BithumbServiceAPI()
+//    static let shared = BithumbService()
     
-    var bithumbProvider = MoyaProvider<BithumbAPIService>()
+    private var bithumbProvider = MoyaProvider<BithumbAPI>()
+
     
-    
-    public init() { }
-    
-     func getBithumbs(orderCurrency: String, paymentCurrency: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+     public func getBithumbs(orderCurrency: String, paymentCurrency: String, completion: @escaping (NetworkResult<Any>) -> Void) {
         
         bithumbProvider.request(.getData(orderCurrency: orderCurrency, paymentCurrency: paymentCurrency)) { result in
             switch result {

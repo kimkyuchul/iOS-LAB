@@ -8,19 +8,11 @@
 import Foundation
 import Moya
 
-enum NetworkResult<T> {
-    case success(T)
-    case requestErr(T)
-    case pathErr
-    case serverErr
-    case networkFail
-}
-
-enum BithumbAPIService {
+enum BithumbAPI {
     case getData(orderCurrency: String, paymentCurrency: String)
 }
 
-extension BithumbAPIService: BaseTargetType {
+extension BithumbAPI: BaseTargetType {
     var baseURL: URL {
         return URL(string: URLConst.base)!
     }
